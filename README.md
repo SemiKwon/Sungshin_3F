@@ -58,3 +58,4 @@ Sungshin_3F은 다른 앱과 차별점을 두기 위해 **캠퍼스 맛집과 �
 ![Static Badge](https://img.shields.io/badge/API-%23FFA500)
 ![Static Badge](https://img.shields.io/badge/Crawling(Scrapping)-%23006400)
 ![Static Badge](https://img.shields.io/badge/Recommendation_Algorithm-%230000FF)
+---
