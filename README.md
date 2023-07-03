@@ -53,9 +53,14 @@ Sungshin_3F은 다른 앱과 차별점을 두기 위해 **캠퍼스 맛집과 �
 **3. 패션**
    * 질문을 통해 이용자의 평소 패션 취향을 알아보고 브랜드와 스타일을 사진으로 제시
 
-## 📌 코드 구성
+## 📌 코드 구성 요소
 ![Static Badge](https://img.shields.io/badge/Firebase-%23FF0000)
 ![Static Badge](https://img.shields.io/badge/API-%23FFA500)
 ![Static Badge](https://img.shields.io/badge/Crawling(Scrapping)-%23006400)
 ![Static Badge](https://img.shields.io/badge/Recommendation_Algorithm-%230000FF)
 ---
+
+
+① Firebase
+
+구글에서 제공하는 모바일 
