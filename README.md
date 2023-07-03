@@ -65,7 +65,7 @@ Sungshin_3F은 다른 앱과 차별점을 두기 위해 **캠퍼스 맛집과 �
 
 구글에서 개발에 필요한 백엔드에 해당하는 구성 요소(인증, 데이터베이스 연결, 푸시 알람, 스토리지, API 등)를 제공하는 모바일 애플리케이션 플랫폼
 
-Outside-Fun 부분의 **연극 데이터를 가져오는 부분에서 Firebase의 데이터베이스 기능**을 활용
+**Outside-Fun** : **연극 데이터를 가져오는 부분에서 Firebase의 데이터베이스 기능**
 
 **1) 연극 추천**
 
@@ -93,4 +93,8 @@ Outside-Fun 부분의 **연극 데이터를 가져오는 부분에서 Firebase�
 
 ⑥ Firebase에서 유저 아이디를 통해 연극·리뷰·유저 Repository에서 관련 요소들을 모두 가지고 오게 만들었습니다.
 
+### *2. API*
 
+**Outside-Fashion** : **날씨 API**
+
+**Inside-Food** : **YouTube Data API**
