@@ -95,6 +95,4 @@ Sungshin_3F은 다른 앱과 차별점을 두기 위해 **캠퍼스 맛집과 �
 
 ### *2. API*
 
-**Outside-Fashion** : **날씨 API**
-
-**Inside-Food** : **YouTube Data API**
+**Outside-Fashion** : **날씨 API** / **Inside-Food** : **YouTube Data API**
