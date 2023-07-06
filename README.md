@@ -126,6 +126,6 @@ Sungshin_3F은 다른 앱과 차별점을 두기 위해 **캠퍼스 맛집과 �
 
 
 ## 📌 [팀] 담당 부분 
-* Firebase 기술 관련된 부분 (본인 구글 계정 사용)
-* 웹툰 추천
+* Inside/Outside-Fun 부분 담당
+* Firebase 기술, 추천 알고리즘 
 * 전반적인 UI
