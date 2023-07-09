@@ -40,7 +40,7 @@ class Recwebtoonres : AppCompatActivity() {
         else { question1 + 0.5
         }
 
-        if (totalResult >=0.5 && totalResult<=1.5){
+        if (totalResult ==0 && totalResult==1.5){
             val question2Result = if (Question2Fragment.question2) 2.0 else 0.5
             val question3Result = if (Question3Fragment.question3) 2.0 else 0.5
             val question5Result = if (Question5Fragment.question5) 2.0 else 0.5
