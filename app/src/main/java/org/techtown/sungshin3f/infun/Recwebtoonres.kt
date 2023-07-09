@@ -68,7 +68,7 @@ class Recwebtoonres : AppCompatActivity() {
         }
 
         if (finalResult >= 4.5) {
-            val randomIndex = Random().nextInt(3)
+            val randomIndex = Random().nextInt(4)
             when (randomIndex) {
                 0 -> {
                     Glide.with(this).load(webtoon1.imgurl).into(binding.recwebtoon1img)
@@ -92,7 +92,7 @@ class Recwebtoonres : AppCompatActivity() {
                 }
             }
         } else if (finalResult >= 2.0) {
-            val randomIndex = Random().nextInt(2)
+            val randomIndex = Random().nextInt(4)
             when (randomIndex) {
                 0 -> {
                     Glide.with(this).load(webtoon6.imgurl).into(binding.recwebtoon1img)
@@ -116,6 +116,7 @@ class Recwebtoonres : AppCompatActivity() {
                 }
             }
         } else {
+            val randomIndex = Random().nextInt(4)
             0 -> {
                 Glide.with(this).load(webtoon11.imgurl).into(binding.recwebtoon1img)
                 binding.recwebtoon1title.text = webtoon11.title
