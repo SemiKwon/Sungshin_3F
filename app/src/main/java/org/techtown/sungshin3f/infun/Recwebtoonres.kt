@@ -91,7 +91,7 @@ class Recwebtoonres : AppCompatActivity() {
                     binding.recwebtoon1title.text = webtoon5.title
                 }
             }
-        } else if (finalResult <= 2.0) {
+        } else if (2.0 <= finalResult < 4.5) {
             val randomIndex = Random().nextInt(4)
             when (randomIndex) {
                 0 -> {
