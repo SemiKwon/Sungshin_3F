@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/webtoon_font"
             android:gravity="center"
-            android:text="호러를 좋아하나요?"
+            android:text="인물 사이에 자극적인 장면이 많은 작품을 선호하시나요?"
             android:textColor="#FFFFFF"
             android:textSize="34sp"
             app:layout_constraintBottom_toBottomOf="parent"
