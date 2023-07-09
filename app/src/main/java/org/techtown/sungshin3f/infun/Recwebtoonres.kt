@@ -33,88 +33,107 @@ class Recwebtoonres : AppCompatActivity() {
         var webtoon14=Webtoon("https://shared-comic.pstatic.net/thumb/webtoon/736989/thumbnail/thumbnail_IMAG10_dc639e95-a787-49bd-9bb6-b835909a764d.jpg","더복서","https://comic.naver.com/webtoon/list?titleId=736989")
         var webtoon15=Webtoon("https://shared-comic.pstatic.net/thumb/webtoon/774862/thumbnail/thumbnail_IMAG10_a192356d-8ef5-4e95-94eb-4f71b4ad09e9.jpg", "조조코믹스", "https://comic.naver.com/webtoon/list?titleId=774862")
 
-        //추천작1
+        val question1 = if (Question1Fragment.question1) 1.0 else 0.0
+        val question4 = if (Question4Fragment.question4) 2.0 else 0.5
+        val totalResult = if (question1 == 1.0) {
+            if (question4 == 2.0) question1 * 2} 
+        else { question1 + 0.5
+        }
 
-        if (Question1Fragment.question1 == true && Question5Fragment.question5==true) {
-            var random1= Random()
-            var randomnum1=random1.nextInt(3)
-            when(randomnum1){
-                0->{
+        if (totalResult >=0.5 && totalResult<=1.5){
+            val question2Result = if (Question2Fragment.question2) 2.0 else 0.5
+            val question3Result = if (Question3Fragment.question3) 2.0 else 0.5
+            val question5Result = if (Question5Fragment.question5) 2.0 else 0.5
+            
+            val finalResult : Double
+            
+            if(question2==2){
+                if(question3==2){
+                    if(question5==2){
+                        finalResult=question2*question3*2}else{finalResult=question2*question3+0.5}
+                }
+                if(question3==0.5){
+                    if(question5==2){
+                        finalResult=question2+question3*2}else{finalResult=question2+question3+0.5}
+                }
+            }
+            
+            if(question2==0.5){
+                if(question3==2){
+                    if(question5==2){finalResult=question2*question3*2}else{finalResult=question2*question3+0.5}
+                }
+                if(question3==0.5){
+                    if(question5==2){finalResult=question2+question3*2}else{finalResult=question2+question3+0.5}}
+            }
+        }
+
+        if (finalResult >= 4.5) {
+            val randomIndex = Random().nextInt(3)
+            when (randomIndex) {
+                0 -> {
                     Glide.with(this).load(webtoon1.imgurl).into(binding.recwebtoon1img)
-                    binding.recwebtoon1title.text=webtoon1.title
+                    binding.recwebtoon1title.text = webtoon1.title
                 }
-                1->{
+                1 -> {
                     Glide.with(this).load(webtoon2.imgurl).into(binding.recwebtoon1img)
-                    binding.recwebtoon1title.text=webtoon2.title
+                    binding.recwebtoon1title.text = webtoon2.title
                 }
-                2->{
+                2 -> {
                     Glide.with(this).load(webtoon3.imgurl).into(binding.recwebtoon1img)
-                    binding.recwebtoon1title.text=webtoon3.title
+                    binding.recwebtoon1title.text = webtoon3.title
                 }
-            }
-
-        }else if(Question1Fragment.question1 == true&& Question5Fragment.question5==false){
-            Glide.with(this).load(webtoon4.imgurl).into(binding.recwebtoon1img)
-            binding.recwebtoon1title.text=webtoon4.title
-        }else if(Question1Fragment.question1 == false&& Question5Fragment.question5==true){
-            var random2= Random()
-            var randomnum2=random2.nextInt(2)
-            when(randomnum2){
-                0->{
+                3 -> {
+                    Glide.with(this).load(webtoon4.imgurl).into(binding.recwebtoon1img)
+                    binding.recwebtoon1title.text = webtoon4.title
+                }
+                4 -> {
                     Glide.with(this).load(webtoon5.imgurl).into(binding.recwebtoon1img)
-                    binding.recwebtoon1title.text=webtoon5.title
+                    binding.recwebtoon1title.text = webtoon5.title
                 }
-                1->{
+            }
+        } else if (finalResult >= 2.0) {
+            val randomIndex = Random().nextInt(2)
+            when (randomIndex) {
+                0 -> {
                     Glide.with(this).load(webtoon6.imgurl).into(binding.recwebtoon1img)
-                    binding.recwebtoon1title.text=webtoon6.title
+                    binding.recwebtoon1title.text = webtoon6.title
+                }
+                1 -> {
+                    Glide.with(this).load(webtoon7.imgurl).into(binding.recwebtoon1img)
+                    binding.recwebtoon1title.text = webtoon7.title
+                }
+                2 -> {
+                    Glide.with(this).load(webtoon8.imgurl).into(binding.recwebtoon1img)
+                    binding.recwebtoon1title.text = webtoon8.title
+                }
+                3 -> {
+                    Glide.with(this).load(webtoon9.imgurl).into(binding.recwebtoon1img)
+                    binding.recwebtoon1title.text = webtoon9.title
+                }
+                4 -> {
+                    Glide.with(this).load(webtoon10.imgurl).into(binding.recwebtoon1img)
+                    binding.recwebtoon1title.text = webtoon10.title
                 }
             }
-        }else{
-            Glide.with(this).load(webtoon7.imgurl).into(binding.recwebtoon1img)
-            binding.recwebtoon1title.text=webtoon7.title
-        }
-        //추천작2
-        if(Question4Fragment.question4==true){
-            Glide.with(this).load(webtoon8.imgurl).into(binding.recwebtoon2img)
-            binding.recwebtoon2title.text=webtoon8.title
-        }else{
-            Glide.with(this).load(webtoon9.imgurl).into(binding.recwebtoon2img)
-            binding.recwebtoon2title.text=webtoon9.title
-        }
-        //추천작3
-        if (Question2Fragment.question2 == true && Question3Fragment.question3==true) {
-            Glide.with(this).load(webtoon10.imgurl).into(binding.recwebtoon3img)
-            binding.recwebtoon3title.text=webtoon10.title
-        }else if(Question2Fragment.question2 == true&& Question3Fragment.question3==false){
-            var random3= Random()
-            var randomnum3=random3.nextInt(2)
-            when(randomnum3){
-                0->{
-                    Glide.with(this).load(webtoon11.imgurl).into(binding.recwebtoon3img)
-                    binding.recwebtoon3title.text=webtoon11.title
-                }
-                1->{
-                    Glide.with(this).load(webtoon12.imgurl).into(binding.recwebtoon3img)
-                    binding.recwebtoon3title.text=webtoon12.title
-                }
+        } else {
+            0 -> {
+                Glide.with(this).load(webtoon11.imgurl).into(binding.recwebtoon1img)
+                binding.recwebtoon1title.text = webtoon11.title
             }
-        }else if(Question2Fragment.question2== false&& Question3Fragment.question3==true){
-            var random4= Random()
-            var randomnum4=random4.nextInt(2)
-            when(randomnum4){
-                0->{
-                    Glide.with(this).load(webtoon13.imgurl).into(binding.recwebtoon3img)
-                    binding.recwebtoon3title.text=webtoon13.title
-                }
-                1->{
-                    Glide.with(this).load(webtoon14.imgurl).into(binding.recwebtoon3img)
-                    binding.recwebtoon3title.text=webtoon14.title
-                }
+            1 -> {
+                Glide.with(this).load(webtoon12.imgurl).into(binding.recwebtoon1img)
+                binding.recwebtoon1title.text = webtoon12.title
             }
-        }else{
-            Glide.with(this).load(webtoon15.imgurl).into(binding.recwebtoon3img)
-            binding.recwebtoon3title.text=webtoon15.title
+            2 -> {
+                Glide.with(this).load(webtoon13.imgurl).into(binding.recwebtoon1img)
+                binding.recwebtoon1title.text = webtoon13.title
+            }
+            3 -> {
+                Glide.with(this).load(webtoon14.imgurl).into(binding.recwebtoon1img)
+                binding.recwebtoon1title.text = webtoon14.title
+            }
+            4 -> {
+                Glide.with(this).load(webtoon15.imgurl).into(binding.recwebtoon1img)
+                binding.recwebtoon1title.text = webtoon15.title
+            }
         }
-
-    }
-}
