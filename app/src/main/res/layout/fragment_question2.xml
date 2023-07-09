@@ -44,7 +44,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/fragment_question"
                 android:fontFamily="@font/webtoon_font"
-                android:text="재밌어요!"
+                android:text="네!"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 app:backgroundTint="@null" />
